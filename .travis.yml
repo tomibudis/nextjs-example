@@ -11,7 +11,7 @@ before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=3000 http://localhost &
 before_script:
   - npm start &
-  - netstat -a
+  
 cache:
   directories:
     - node_modules
@@ -22,4 +22,5 @@ install:
   - npm install pm2 -g
 
 script:
+  - netstat -a
   - npm test home
