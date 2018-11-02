@@ -6,8 +6,8 @@ const HEIGHT = 900
 isDebugging = () => {
     const debuggingMode = {
       headless : false,
-      slowMo : 150,
-      devtools : true
+     
+      args: ['--no-sandbox']
       // args: [`--window-size=${WIDTH},${HEIGHT}`]
     }
     return process.env.NODE_ENV === 'debug' ? debuggingMode : {}
@@ -20,7 +20,7 @@ isDebugging = () => {
 
   //  page.setViewport({ width: 1680 , height:900})
   
-   await page.goto('http://localhost/home')
+   await page.goto('http://localhost:3000/home')
    
  },50000)
 
