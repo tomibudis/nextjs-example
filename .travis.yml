@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - "8.11.3"
+
+cache:
+  directories:
+    - node_modules
+
+install: 
+  - npm cache clean --force
+  - npm install
+  - npm install pm2 -g
+
+before_script: 
+  - pm2 start npm -- run dev
+  
+script:
+  - pm2 list
+  - npm test home 
