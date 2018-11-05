@@ -10,7 +10,7 @@ addons:
 before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:3000 &
 before_script:
-  - npm start &
+  - npm dev &
   
 cache:
   directories:
@@ -22,4 +22,4 @@ install:
   - npm install pm2 -g
 
 script:
-  - npm test home
+  - netstat -a
