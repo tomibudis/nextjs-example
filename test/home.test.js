@@ -5,8 +5,7 @@ const HEIGHT = 900
 
 isDebugging = () => {
     const debuggingMode = {
-      headless : false,
-     
+      headless : true,
       args: ['--no-sandbox']
       // args: [`--window-size=${WIDTH},${HEIGHT}`]
     }
