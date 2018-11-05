@@ -20,7 +20,7 @@ isDebugging = () => {
 
   //  page.setViewport({ width: 1680 , height:900})
   
-   await page.goto('http://localhost/home')
+   await page.goto('http://localhost:3000/home')
    
  },50000)
 
