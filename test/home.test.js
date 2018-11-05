@@ -6,7 +6,7 @@ const HEIGHT = 900
 isDebugging = () => {
     const debuggingMode = {
       headless : true,
-      args: ['--no-sandbox']
+      args: ['--no-sandbox', '--disable-setuid-sandbox'], dumpio: true
       // args: [`--window-size=${WIDTH},${HEIGHT}`]
     }
     return process.env.NODE_ENV === 'debug' ? debuggingMode : {}
