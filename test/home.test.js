@@ -15,11 +15,12 @@ isDebugging = () => {
  beforeAll( async () => {
    browser =  await puppeteer.launch( isDebugging() )
    page = await browser.newPage()
+   page.setExtraHTTPHeaders({ 'upgrade-insecure-requests': '0' });
    await page.on('console', msg => console.log('PAGE LOG:', msg.text() ));
 
   //  page.setViewport({ width: 1680 , height:900})
   
-   await page.goto('http://localhost:9222/home')
+   await page.goto('http://localhost:3000/home')
    
  },50000)
 
